@@ -122,7 +122,7 @@ function Article() {
   const renderContent = () => {
     // Split markdown by quiz placeholders
     const parts = markdown.split(/---QUIZ-(\d+)---/);
-    const elements: JSX.Element[] = [];
+    const elements: React.ReactElement[] = [];
 
     for (let i = 0; i < parts.length; i++) {
       if (i % 2 === 0) {

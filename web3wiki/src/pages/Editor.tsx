@@ -11,7 +11,7 @@ import "highlight.js/styles/github-dark.css";
 import "./Editor.css";
 
 function Editor() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [articleId, setArticleId] = useState("");
   const [language, setLanguage] = useState<"en_us" | "zh_cn">("en_us");
@@ -41,7 +41,7 @@ function Editor() {
   // Render markdown with quizzes
   const renderPreview = () => {
     const parts = parsedContent.markdown.split(/---QUIZ-(\d+)---/);
-    const elements: JSX.Element[] = [];
+    const elements: React.ReactElement[] = [];
 
     for (let i = 0; i < parts.length; i++) {
       if (i % 2 === 0) {

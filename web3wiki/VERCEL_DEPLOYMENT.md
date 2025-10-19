@@ -100,16 +100,39 @@ server/data/
 
 ### 2. 配置项目设置
 
-#### Framework Preset:
-- 选择 **Vite**
+Vercel 会显示一个配置页面，按以下方式填写：
 
-#### Root Directory:
-- 保持默认（`.`）
+#### Framework Preset（框架预设）:
+- Vercel 会自动检测到 **Vite**
+- 如果没有自动检测，手动选择 **Vite**
+- ✅ 保持自动检测的设置
 
-#### Build and Output Settings:
-- Build Command: `yarn build`
-- Output Directory: `dist`
-- Install Command: `yarn install`
+#### Root Directory（根目录）:
+- 保持默认 `./`（表示仓库根目录）
+- ❌ **不要修改这个设置**
+
+#### Build and Output Settings（构建和输出设置）:
+
+**重要**: 以下设置通常会自动填充，但请确认它们的值：
+
+| 配置项 | 应该填写的值 | 说明 |
+|--------|-------------|------|
+| **Build Command** | `yarn build` | 如果你使用 npm，填 `npm run build` |
+| **Output Directory** | `dist` | Vite 的默认输出目录 |
+| **Install Command** | `yarn install` | 如果你使用 npm，填 `npm install` |
+
+**如何确认设置正确？**
+
+查看你的 `package.json` 文件中的 `scripts` 部分：
+```json
+{
+  "scripts": {
+    "build": "tsc -b && vite build"  // ← 这就是 Build Command
+  }
+}
+```
+
+Vite 项目默认输出到 `dist/` 目录，这就是 Output Directory。
 
 ### 3. 配置环境变量
 

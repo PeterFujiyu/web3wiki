@@ -17,7 +17,7 @@ export interface FeedbackData {
   contactEmail?: string;
 }
 
-function FeedbackModal({ selectedText, articleId, onClose, onSubmit }: FeedbackModalProps) {
+function FeedbackModal({ selectedText, onClose, onSubmit }: FeedbackModalProps) {
   const { t } = useTranslation();
   const [suggestion, setSuggestion] = useState("");
   const [type, setType] = useState<FeedbackData["type"]>("correction");
