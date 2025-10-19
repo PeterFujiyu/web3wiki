@@ -1,0 +1,199 @@
+.feedback-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: backdropFadeIn 0.2s ease-out;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feedback-modal {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.feedback-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.feedback-modal-header h3 {
+  margin: 0;
+  color: var(--accent-color);
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 1.3em;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+}
+
+.close-button svg {
+  fill: var(--text-color);
+}
+
+.feedback-modal form {
+  padding: 24px;
+}
+
+.feedback-section {
+  margin-bottom: 20px;
+}
+
+.feedback-section label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.selected-text-display {
+  padding: 12px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  color: var(--text-color);
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  color: var(--text-color);
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.1);
+}
+
+.feedback-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.feedback-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--card-border);
+}
+
+.cancel-button,
+.submit-button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+}
+
+.cancel-button:hover:not(:disabled) {
+  border-color: var(--accent-color);
+}
+
+.submit-button {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:disabled,
+.cancel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .feedback-modal {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .feedback-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+  }
+}

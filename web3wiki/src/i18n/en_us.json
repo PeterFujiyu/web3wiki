@@ -1,0 +1,155 @@
+{
+  "header": {
+    "title": "Web3wiki",
+    "nav": {
+      "home": "Home",
+      "explore": "Explore",
+      "about": "About",
+      "try": "Try",
+      "editor": "Editor"
+    }
+  },
+  "home": {
+    "title": "Welcome to Web3wiki",
+    "subtitle": "Your comprehensive learning platform for blockchain technology, cryptocurrency, and decentralized applications.",
+    "exploreButton": "Explore Articles",
+    "learnMore": "Learn More"
+  },
+  "explore": {
+    "title": "Explore Web3",
+    "subtitle": "Discover comprehensive tutorials and guides on blockchain and Web3 technologies"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Subscribe to our newsletter for the latest Web3 tutorials, updates, and insights delivered to your inbox.",
+    "placeholder": "Enter your email address",
+    "subscribe": "Subscribe",
+    "submitting": "Subscribing...",
+    "success": "Thank you for subscribing! Check your inbox for confirmation.",
+    "error": "Something went wrong. Please try again later."
+  },
+  "main": {
+    "featuredArticles": "Featured Articles",
+    "articles": {
+      "blockchain": {
+        "title": "Introduction to Blockchain",
+        "description": "Learn the fundamentals of blockchain technology.",
+        "code": "// Simple Blockchain Structure\nclass Block {\n  constructor(index, timestamp, data, previousHash = '') {\n    this.index = index;\n    this.timestamp = timestamp;\n    this.data = data;\n    this.previousHash = previousHash;\n    this.hash = this.calculateHash();\n  }\n\n  calculateHash() {\n    return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();\n  }\n}\n\nclass Blockchain {\n  constructor() {\n    this.chain = [this.createGenesisBlock()];\n  }\n\n  createGenesisBlock() {\n    return new Block(0, \"01/01/2024\", \"Genesis Block\", \"0\");\n  }\n\n  getLatestBlock() {\n    return this.chain[this.chain.length - 1];\n  }\n\n  addBlock(newBlock) {\n    newBlock.previousHash = this.getLatestBlock().hash;\n    newBlock.hash = newBlock.calculateHash();\n    this.chain.push(newBlock);\n  }\n}",
+        "language": "javascript"
+      },
+      "ethereum": {
+        "title": "What is Ethereum?",
+        "description": "An overview of the leading smart contract platform.",
+        "code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract SimpleStorage {\n    uint256 private storedData;\n    \n    event DataStored(uint256 data);\n    \n    function set(uint256 x) public {\n        storedData = x;\n        emit DataStored(x);\n    }\n    \n    function get() public view returns (uint256) {\n        return storedData;\n    }\n}\n\ncontract Token {\n    mapping(address => uint256) public balances;\n    \n    constructor(uint256 initialSupply) {\n        balances[msg.sender] = initialSupply;\n    }\n    \n    function transfer(address to, uint256 amount) public {\n        require(balances[msg.sender] >= amount, \"Insufficient balance\");\n        balances[msg.sender] -= amount;\n        balances[to] += amount;\n    }\n}",
+        "language": "solidity"
+      },
+      "nft": {
+        "title": "Understanding NFTs",
+        "description": "A guide to non-fungible tokens.",
+        "code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract MyNFT is ERC721, Ownable {\n    uint256 private _tokenIdCounter;\n    mapping(uint256 => string) private _tokenURIs;\n    \n    constructor() ERC721(\"MyNFT\", \"MNFT\") {}\n    \n    function mint(address to, string memory tokenURI) public onlyOwner {\n        uint256 tokenId = _tokenIdCounter;\n        _tokenIdCounter++;\n        \n        _safeMint(to, tokenId);\n        _tokenURIs[tokenId] = tokenURI;\n    }\n    \n    function tokenURI(uint256 tokenId) public view override returns (string memory) {\n        require(_exists(tokenId), \"Token does not exist\");\n        return _tokenURIs[tokenId];\n    }\n}",
+        "language": "solidity"
+      },
+      "web3Tutorial": {
+        "title": "Web3 Beginner's Guide",
+        "description": "Complete guide to getting started with MetaMask and Web3."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 web3wiki"
+  },
+  "language": {
+    "english": "English",
+    "chinese": "中文"
+  },
+  "editor": {
+    "back": "Back",
+    "articleId": "Article ID (e.g., blockchain)",
+    "save": "Save",
+    "download": "Download",
+    "edit": "Edit",
+    "split": "Split",
+    "preview": "Preview",
+    "saved": "Article saved!",
+    "savedInfo": "ID: {id}\nLanguage: {language}\nContent length: {length} characters"
+  },
+  "code": {
+    "show": "Show Code",
+    "hide": "Hide Code",
+    "copy": "Copy code",
+    "copied": "Copied!"
+  },
+  "quiz": {
+    "title": "Interactive Quiz",
+    "correct": "Correct! Well done!",
+    "incorrect": "Incorrect. Try again!",
+    "explanation": "Explanation",
+    "retry": "Retry"
+  },
+  "feedback": {
+    "report": "Report",
+    "modalTitle": "Suggest Improvement",
+    "selectedText": "Selected Text",
+    "typeLabel": "Feedback Type",
+    "types": {
+      "correction": "Correction (Error/Typo)",
+      "improvement": "Improvement (Better Wording)",
+      "addition": "Addition (Missing Info)",
+      "question": "Question (Unclear)"
+    },
+    "suggestionLabel": "Your Suggestion",
+    "suggestionPlaceholder": "Please describe the issue or your suggestion...",
+    "emailLabel": "Contact Email (Optional)",
+    "emailPlaceholder": "your@email.com",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "submitSuccess": "Thank you! Your feedback has been submitted successfully."
+  },
+  "about": {
+    "title": "About Web3wiki",
+    "mission": {
+      "title": "Our Mission",
+      "content": "Web3wiki is dedicated to making blockchain and Web3 technology accessible to everyone. We believe that understanding these transformative technologies shouldn't require a computer science degree. Our mission is to provide clear, comprehensive, and interactive educational resources that empower people to confidently navigate the Web3 ecosystem."
+    },
+    "what": {
+      "title": "What We Offer",
+      "content": "Web3wiki is your comprehensive learning platform for blockchain technology, cryptocurrency, and decentralized applications. We provide:",
+      "features": {
+        "tutorials": "Step-by-step tutorials from beginner to advanced topics",
+        "interactive": "Interactive quizzes and hands-on learning experiences",
+        "multilingual": "Multilingual support (English and Chinese) to reach a global audience",
+        "community": "Community-driven content with feedback and contribution features"
+      }
+    },
+    "why": {
+      "title": "Why Choose Web3wiki?",
+      "features": {
+        "free": {
+          "title": "Free & Open",
+          "description": "All our content is completely free and accessible to everyone. No paywalls, no subscriptions."
+        },
+        "accessible": {
+          "title": "Beginner-Friendly",
+          "description": "We break down complex concepts into easy-to-understand explanations with practical examples."
+        },
+        "comprehensive": {
+          "title": "Comprehensive Coverage",
+          "description": "From basic blockchain concepts to advanced smart contract development, we cover it all."
+        },
+        "interactive": {
+          "title": "Interactive Learning",
+          "description": "Test your knowledge with quizzes, contribute improvements, and engage with the content."
+        }
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "content": "Web3wiki is built by developers and educators passionate about blockchain technology. We're committed to creating high-quality educational content and continuously improving based on community feedback."
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "content": "Have questions or suggestions? We'd love to hear from you! Connect with us on social media or contribute to our open-source project."
+    }
+  }
+}

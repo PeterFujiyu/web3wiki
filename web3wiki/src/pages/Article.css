@@ -1,0 +1,146 @@
+@import "../components/CollapsibleCode.css";
+
+.article-page {
+  padding: 40px 20px;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button svg {
+  fill: #ffffff;
+}
+
+.article-content {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.markdown-preview {
+  font-family: Monaco, "Courier New", Courier, monospace;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.markdown-preview h1 {
+  color: var(--accent-color);
+  font-size: 2.5em;
+  margin: 0 0 24px 0;
+  border-bottom: 2px solid var(--card-border);
+  padding-bottom: 12px;
+}
+
+.markdown-preview h2 {
+  color: var(--accent-color);
+  font-size: 2em;
+  margin: 32px 0 16px 0;
+}
+
+.markdown-preview h3 {
+  color: var(--accent-color);
+  font-size: 1.5em;
+  margin: 24px 0 12px 0;
+}
+
+.markdown-preview p {
+  margin: 16px 0;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  margin: 16px 0;
+  padding-left: 32px;
+}
+
+.markdown-preview li {
+  margin: 8px 0;
+}
+
+.markdown-preview code {
+  background-color: var(--bg-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.markdown-preview pre {
+  background-color: var(--bg-color);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.markdown-preview pre code {
+  background: none;
+  padding: 0;
+}
+
+.markdown-preview a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.markdown-preview a:hover {
+  text-decoration: underline;
+}
+
+.markdown-preview blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 16px;
+  margin: 16px 0;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.markdown-preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid var(--card-border);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.markdown-preview th {
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+

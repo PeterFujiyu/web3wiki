@@ -1,0 +1,50 @@
+.text-selection-toolbar {
+  position: fixed;
+  transform: translate(-50%, -100%);
+  z-index: 1000;
+  animation: toolbarFadeIn 0.2s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes toolbarFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%) scale(1);
+  }
+}
+
+.report-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 20px;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 0.85em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.report-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.report-button:active {
+  transform: translateY(0);
+}
+
+.report-button svg {
+  fill: #1a1a1a;
+  flex-shrink: 0;
+}

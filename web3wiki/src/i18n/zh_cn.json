@@ -1,0 +1,155 @@
+{
+  "header": {
+    "title": "Web3百科",
+    "nav": {
+      "home": "首页",
+      "explore": "探索",
+      "about": "关于",
+      "try": "试用",
+      "editor": "编辑器"
+    }
+  },
+  "home": {
+    "title": "欢迎来到 Web3百科",
+    "subtitle": "您学习区块链技术、加密货币和去中心化应用的综合平台。",
+    "exploreButton": "探索文章",
+    "learnMore": "了解更多"
+  },
+  "explore": {
+    "title": "探索 Web3",
+    "subtitle": "探索区块链和 Web3 技术的全面教程和指南"
+  },
+  "newsletter": {
+    "title": "保持更新",
+    "subtitle": "订阅我们的简报，获取最新的 Web3 教程、更新和见解，直接发送到您的收件箱。",
+    "placeholder": "输入您的电子邮箱",
+    "subscribe": "订阅",
+    "submitting": "订阅中...",
+    "success": "感谢订阅！请查看您的收件箱以确认。",
+    "error": "出了点问题，请稍后重试。"
+  },
+  "main": {
+    "featuredArticles": "精选文章",
+    "articles": {
+      "blockchain": {
+        "title": "区块链入门",
+        "description": "学习区块链技术的基础知识。",
+        "code": "// 简单的区块链结构\nclass Block {\n  constructor(index, timestamp, data, previousHash = '') {\n    this.index = index;\n    this.timestamp = timestamp;\n    this.data = data;\n    this.previousHash = previousHash;\n    this.hash = this.calculateHash();\n  }\n\n  calculateHash() {\n    return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();\n  }\n}\n\nclass Blockchain {\n  constructor() {\n    this.chain = [this.createGenesisBlock()];\n  }\n\n  createGenesisBlock() {\n    return new Block(0, \"2024/01/01\", \"创世区块\", \"0\");\n  }\n\n  getLatestBlock() {\n    return this.chain[this.chain.length - 1];\n  }\n\n  addBlock(newBlock) {\n    newBlock.previousHash = this.getLatestBlock().hash;\n    newBlock.hash = newBlock.calculateHash();\n    this.chain.push(newBlock);\n  }\n}",
+        "language": "javascript"
+      },
+      "ethereum": {
+        "title": "什么是以太坊？",
+        "description": "领先的智能合约平台概览。",
+        "code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract SimpleStorage {\n    uint256 private storedData;\n    \n    event DataStored(uint256 data);\n    \n    function set(uint256 x) public {\n        storedData = x;\n        emit DataStored(x);\n    }\n    \n    function get() public view returns (uint256) {\n        return storedData;\n    }\n}\n\ncontract Token {\n    mapping(address => uint256) public balances;\n    \n    constructor(uint256 initialSupply) {\n        balances[msg.sender] = initialSupply;\n    }\n    \n    function transfer(address to, uint256 amount) public {\n        require(balances[msg.sender] >= amount, \"余额不足\");\n        balances[msg.sender] -= amount;\n        balances[to] += amount;\n    }\n}",
+        "language": "solidity"
+      },
+      "nft": {
+        "title": "理解NFT",
+        "description": "非同质化代币指南。",
+        "code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract MyNFT is ERC721, Ownable {\n    uint256 private _tokenIdCounter;\n    mapping(uint256 => string) private _tokenURIs;\n    \n    constructor() ERC721(\"我的NFT\", \"MNFT\") {}\n    \n    function mint(address to, string memory tokenURI) public onlyOwner {\n        uint256 tokenId = _tokenIdCounter;\n        _tokenIdCounter++;\n        \n        _safeMint(to, tokenId);\n        _tokenURIs[tokenId] = tokenURI;\n    }\n    \n    function tokenURI(uint256 tokenId) public view override returns (string memory) {\n        require(_exists(tokenId), \"代币不存在\");\n        return _tokenURIs[tokenId];\n    }\n}",
+        "language": "solidity"
+      },
+      "web3Tutorial": {
+        "title": "Web3 入门指南",
+        "description": "从零开始学习使用 MetaMask 和 Web3 的完整指南。"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Web3百科"
+  },
+  "language": {
+    "english": "English",
+    "chinese": "中文"
+  },
+  "editor": {
+    "back": "返回",
+    "articleId": "文章ID（例如：blockchain）",
+    "save": "保存",
+    "download": "下载",
+    "edit": "编辑",
+    "split": "分栏",
+    "preview": "预览",
+    "saved": "文章已保存！",
+    "savedInfo": "ID：{id}\n语言：{language}\n内容长度：{length} 个字符"
+  },
+  "code": {
+    "show": "显示代码",
+    "hide": "隐藏代码",
+    "copy": "复制代码",
+    "copied": "已复制！"
+  },
+  "quiz": {
+    "title": "互动测验",
+    "correct": "答对了！做得好！",
+    "incorrect": "答错了。再试一次！",
+    "explanation": "解释",
+    "retry": "重试"
+  },
+  "feedback": {
+    "report": "报告",
+    "modalTitle": "提出改进建议",
+    "selectedText": "选中的文本",
+    "typeLabel": "反馈类型",
+    "types": {
+      "correction": "更正（错误/错别字）",
+      "improvement": "改进（更好的措辞）",
+      "addition": "补充（缺失信息）",
+      "question": "疑问（不清楚）"
+    },
+    "suggestionLabel": "您的建议",
+    "suggestionPlaceholder": "请描述问题或您的建议...",
+    "emailLabel": "联系邮箱（可选）",
+    "emailPlaceholder": "your@email.com",
+    "cancel": "取消",
+    "submit": "提交",
+    "submitting": "提交中...",
+    "submitSuccess": "谢谢！您的反馈已成功提交。"
+  },
+  "about": {
+    "title": "关于 Web3百科",
+    "mission": {
+      "title": "我们的使命",
+      "content": "Web3百科致力于让区块链和 Web3 技术对所有人都触手可及。我们相信，理解这些变革性技术不应该需要计算机科学学位。我们的使命是提供清晰、全面和互动的教育资源，使人们能够自信地驾驭 Web3 生态系统。"
+    },
+    "what": {
+      "title": "我们提供什么",
+      "content": "Web3百科是您学习区块链技术、加密货币和去中心化应用的综合平台。我们提供：",
+      "features": {
+        "tutorials": "从初学者到高级主题的分步教程",
+        "interactive": "互动测验和实践学习体验",
+        "multilingual": "多语言支持（英语和中文）覆盖全球受众",
+        "community": "社区驱动的内容，支持反馈和贡献功能"
+      }
+    },
+    "why": {
+      "title": "为什么选择 Web3百科？",
+      "features": {
+        "free": {
+          "title": "免费开放",
+          "description": "我们所有的内容完全免费，对所有人开放。没有付费墙，没有订阅。"
+        },
+        "accessible": {
+          "title": "初学者友好",
+          "description": "我们将复杂的概念分解为易于理解的解释，并提供实际示例。"
+        },
+        "comprehensive": {
+          "title": "全面覆盖",
+          "description": "从基本的区块链概念到高级智能合约开发，我们涵盖一切。"
+        },
+        "interactive": {
+          "title": "互动学习",
+          "description": "通过测验测试您的知识，贡献改进建议，并与内容互动。"
+        }
+      }
+    },
+    "team": {
+      "title": "我们的团队",
+      "content": "Web3百科由热爱区块链技术的开发者和教育工作者构建。我们致力于创建高质量的教育内容，并根据社区反馈不断改进。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "content": "有问题或建议？我们很乐意听取您的意见！在社交媒体上与我们联系，或为我们的开源项目做出贡献。"
+    }
+  }
+}
