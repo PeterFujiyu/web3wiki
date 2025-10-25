@@ -48,3 +48,13 @@
   fill: #1a1a1a;
   flex-shrink: 0;
 }
+
+/* Dark Mode Support */
+[data-theme="dark"] .report-button {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}
+
+[data-theme="dark"] .report-button svg {
+  fill: #1a1a1a;
+}

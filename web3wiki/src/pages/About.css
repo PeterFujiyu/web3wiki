@@ -188,3 +188,13 @@
     justify-content: center;
   }
 }
+
+/* Dark Mode Support */
+[data-theme="dark"] .contact-link {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}
+
+[data-theme="dark"] .contact-link svg {
+  fill: #1a1a1a;
+}

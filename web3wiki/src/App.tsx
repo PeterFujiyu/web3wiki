@@ -7,6 +7,7 @@ import Explore from "./pages/Explore";
 import Article from "./pages/Article";
 import Editor from "./pages/Editor";
 import About from "./pages/About";
+import Glossary from "./pages/Glossary";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="article/:id" element={<Article />} />
           <Route path="editor" element={<Editor />} />
           <Route path="about" element={<About />} />
+          <Route path="glossary" element={<Glossary />} />
         </Route>
       </Routes>
     </BrowserRouter>

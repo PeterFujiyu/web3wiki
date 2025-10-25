@@ -9,6 +9,11 @@ export const API_ENDPOINTS = {
   feedback: {
     submit: `${API_BASE_URL}/api/feedback`,
   },
+  glossary: {
+    submit: `${API_BASE_URL}/api/glossary`,
+    submissions: `${API_BASE_URL}/api/glossary/submissions`,
+    approve: (submissionId: string) => `${API_BASE_URL}/api/glossary/approve/${submissionId}`,
+  },
   health: `${API_BASE_URL}/api/health`,
   // Admin endpoints (require authentication)
   admin: {

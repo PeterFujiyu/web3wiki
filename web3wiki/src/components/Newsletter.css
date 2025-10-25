@@ -2,9 +2,11 @@
   max-width: 95%;
   margin: 40px auto;
   padding: 50px 20px;
-  background: #f0f8ff;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .newsletter-container {
@@ -144,4 +146,22 @@
   .newsletter-button {
     width: 100%;
   }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .newsletter-button {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}
+
+[data-theme="dark"] .newsletter-message.success {
+  background: rgba(76, 175, 80, 0.2);
+  color: #81c784;
+  border-color: #66bb6a;
+}
+
+[data-theme="dark"] .newsletter-message.error {
+  background: rgba(244, 67, 54, 0.2);
+  color: #e57373;
+  border-color: #ef5350;
 }

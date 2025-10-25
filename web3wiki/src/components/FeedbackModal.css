@@ -197,3 +197,9 @@
     width: 100%;
   }
 }
+
+/* Dark Mode Support */
+[data-theme="dark"] .submit-button {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}

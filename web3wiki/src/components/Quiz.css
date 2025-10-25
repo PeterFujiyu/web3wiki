@@ -186,3 +186,45 @@
     transform: translateY(0);
   }
 }
+
+/* Dark Mode Support */
+[data-theme="dark"] .quiz-option.correct {
+  border-color: #66bb6a;
+  background-color: rgba(76, 175, 80, 0.15);
+}
+
+[data-theme="dark"] .quiz-option.incorrect {
+  border-color: #ef5350;
+  background-color: rgba(244, 67, 54, 0.15);
+}
+
+[data-theme="dark"] .check-icon {
+  fill: #66bb6a;
+}
+
+[data-theme="dark"] .cross-icon {
+  fill: #ef5350;
+}
+
+[data-theme="dark"] .quiz-result.correct {
+  background-color: rgba(76, 175, 80, 0.2);
+  border-color: #66bb6a;
+}
+
+[data-theme="dark"] .quiz-result.incorrect {
+  background-color: rgba(244, 67, 54, 0.2);
+  border-color: #ef5350;
+}
+
+[data-theme="dark"] .quiz-result.correct .result-text {
+  color: #81c784;
+}
+
+[data-theme="dark"] .quiz-result.incorrect .result-text {
+  color: #e57373;
+}
+
+[data-theme="dark"] .retry-button {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}

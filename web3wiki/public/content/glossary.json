@@ -1,0 +1,276 @@
+{
+  "en": [
+    {
+      "id": "blockchain",
+      "term": "Blockchain",
+      "definition": "A [?-distributed digital ledger-]{Data is stored across multiple computers, not in one central location} that records transactions across multiple computers in a way that makes it nearly impossible to alter retroactively.\n\nKey characteristics:\n- [?-Decentralized-]{No single point of control or failure} and distributed\n- [?-Immutable-]{Once recorded, data cannot be changed or deleted} and transparent\n- Secured through [?-cryptography-]{Mathematical algorithms that ensure security and privacy}\n- Maintained by a network of nodes",
+      "category": "blockchain",
+      "tags": ["fundamental", "technology", "distributed-system"],
+      "relatedTerms": ["bitcoin", "consensus", "node"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "bitcoin",
+      "term": "Bitcoin",
+      "definition": "The first and most well-known [?-cryptocurrency-]{Digital money secured by cryptography}, created by [?-Satoshi Nakamoto-]{Pseudonymous creator whose real identity remains unknown} in 2009.\n\nBitcoin introduced the concept of a decentralized digital currency that operates without a [?-central authority-]{Like banks or governments} or intermediaries.",
+      "category": "blockchain",
+      "tags": ["cryptocurrency", "payment", "fundamental"],
+      "relatedTerms": ["blockchain", "satoshi", "mining"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "ethereum",
+      "term": "Ethereum",
+      "definition": "A decentralized blockchain platform that enables developers to build and deploy [?-smart contracts-]{Self-executing code that runs automatically when conditions are met} and [?-decentralized applications-]{Applications that run on blockchain, not controlled by any single entity} (dApps).\n\nEthereum uses its native cryptocurrency [?-Ether (ETH)-]{The fuel that powers the Ethereum network} to power the network.",
+      "category": "ethereum",
+      "tags": ["platform", "smart-contract", "fundamental"],
+      "relatedTerms": ["smart-contract", "gas", "evm", "dapp"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "smart-contract",
+      "term": "Smart Contract",
+      "definition": "Self-executing contracts with the terms of the agreement directly written into code.\n\nSmart contracts automatically execute when [?-predetermined conditions-]{If-then rules defined in the code} are met, without requiring [?-intermediaries-]{Third parties like lawyers or notaries}.\n\n**Example use cases:**\n- [?-DeFi-]{Decentralized Finance} protocols\n- NFT marketplaces\n- Automated token distribution",
+      "category": "ethereum",
+      "tags": ["programming", "automation", "fundamental"],
+      "relatedTerms": ["ethereum", "solidity", "dapp"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "gas",
+      "term": "Gas",
+      "definition": "The [?-fee-]{Payment for computational work} required to execute transactions or smart contracts on the Ethereum network.\n\nGas is measured in [?-gwei-]{Giga-wei: 1 gwei = 0.000000001 ETH} (1 gwei = 0.000000001 ETH) and varies based on [?-network congestion-]{Higher demand = higher gas prices}.\n\n**Formula:**\n```\nTotal Fee = Gas Units Used × Gas Price\n```",
+      "category": "ethereum",
+      "tags": ["fee", "transaction", "economics"],
+      "relatedTerms": ["ethereum", "gwei", "transaction"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "nft",
+      "term": "NFT (Non-Fungible Token)",
+      "definition": "A unique digital asset that represents ownership of a specific item or piece of content on the blockchain.\n\nUnlike cryptocurrencies ([?-fungible tokens-]{Each unit is identical and interchangeable, like dollars}), each NFT has distinct properties and cannot be exchanged on a one-to-one basis.\n\n**Common standards:**\n- [?-ERC-721-]{Ethereum standard for unique tokens} (Ethereum)\n- [?-ERC-1155-]{Can handle both fungible and non-fungible tokens} (Multi-token standard)",
+      "category": "nft",
+      "tags": ["token", "digital-asset", "ownership"],
+      "relatedTerms": ["erc721", "metadata", "minting"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "wallet",
+      "term": "Wallet",
+      "definition": "A digital tool that allows users to store, send, and receive cryptocurrencies.\n\n**Types:**\n- [?-Hot Wallets-]{Always connected to the internet, convenient but less secure}: Connected to the internet (e.g., MetaMask, Trust Wallet)\n- [?-Cold Wallets-]{Offline storage, more secure but less convenient}: Offline storage (e.g., hardware wallets like Ledger, Trezor)\n\nWallets store [?-private keys-]{Secret codes that prove ownership}, not the actual cryptocurrency.",
+      "category": "blockchain",
+      "tags": ["storage", "security", "tool"],
+      "relatedTerms": ["private-key", "metamask", "security"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "defi",
+      "term": "DeFi (Decentralized Finance)",
+      "definition": "Financial services built on blockchain technology that operate without traditional [?-intermediaries-]{Banks, brokers, or other financial institutions} like banks.\n\n**Core components:**\n- Lending and borrowing protocols\n- [?-DEXs-]{Decentralized Exchanges: peer-to-peer trading without middlemen} (Decentralized exchanges)\n- [?-Yield farming-]{Earning rewards by providing liquidity to DeFi protocols} and staking\n- [?-Liquidity pools-]{Pools of tokens locked in smart contracts to facilitate trading}",
+      "category": "defi",
+      "tags": ["finance", "application", "ecosystem"],
+      "relatedTerms": ["dex", "liquidity-pool", "yield-farming"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "dapp",
+      "term": "DApp (Decentralized Application)",
+      "definition": "An application that runs on a [?-decentralized network-]{Distributed across many computers, not controlled by one entity}, typically using smart contracts on a blockchain.\n\n**Characteristics:**\n- [?-Open source-]{Code is publicly available and auditable} code\n- Decentralized data storage\n- [?-Token-based economics-]{Uses cryptocurrency tokens for incentives and governance}\n- Consensus mechanism",
+      "category": "ethereum",
+      "tags": ["application", "development"],
+      "relatedTerms": ["smart-contract", "ethereum", "web3"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "consensus",
+      "term": "Consensus Mechanism",
+      "definition": "The process by which [?-nodes-]{Computers participating in the blockchain network} in a blockchain network agree on the current state of the [?-distributed ledger-]{Shared database maintained across multiple locations}.\n\n**Common mechanisms:**\n- [?-Proof of Work (PoW)-]{Miners solve complex puzzles to validate transactions}: Mining-based (Bitcoin)\n- [?-Proof of Stake (PoS)-]{Validators stake coins to secure the network}: Staking-based (Ethereum 2.0)\n- **Delegated Proof of Stake (DPoS)**\n- **Proof of Authority (PoA)**",
+      "category": "blockchain",
+      "tags": ["protocol", "fundamental", "technology"],
+      "relatedTerms": ["mining", "staking", "validator"],
+      "difficulty": "advanced"
+    },
+    {
+      "id": "mining",
+      "term": "Mining",
+      "definition": "The process of validating transactions and adding new blocks to a blockchain using the [?-Proof of Work-]{Computational puzzle-solving to secure the network} consensus mechanism.\n\nMiners compete to solve complex mathematical puzzles, and the first to succeed receives a [?-block reward-]{Newly created cryptocurrency plus transaction fees}.\n\n**Requirements:**\n- Specialized hardware ([?-ASICs-]{Application-Specific Integrated Circuits: chips designed only for mining} or [?-GPUs-]{Graphics Processing Units: powerful graphics cards})\n- Significant electricity consumption\n- Computational power",
+      "category": "blockchain",
+      "tags": ["proof-of-work", "validation", "economics"],
+      "relatedTerms": ["consensus", "pow", "block-reward"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "staking",
+      "term": "Staking",
+      "definition": "The process of locking cryptocurrency to support blockchain network operations in [?-Proof of Stake-]{Alternative to mining, more energy-efficient} systems.\n\nStakers are rewarded for [?-validating transactions-]{Confirming that transactions are legitimate} and maintaining network security.\n\n**Benefits:**\n- Earn [?-passive income-]{Regular rewards for holding and staking your crypto}\n- More energy-efficient than mining\n- Supports network [?-decentralization-]{Distribution of power across many participants}",
+      "category": "blockchain",
+      "tags": ["proof-of-stake", "validation", "passive-income"],
+      "relatedTerms": ["consensus", "pos", "validator"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "metamask",
+      "term": "MetaMask",
+      "definition": "A popular [?-browser extension-]{Plugin that adds functionality to your web browser} and mobile app that functions as an Ethereum wallet and gateway to blockchain applications.\n\n**Features:**\n- Store and manage Ethereum and [?-ERC-20 tokens-]{Tokens built on the Ethereum blockchain following a standard}\n- Interact with dApps directly from your browser\n- Secure [?-key management-]{Safely stores your private keys locally}\n- [?-Multi-network support-]{Connect to different blockchains and test networks}",
+      "category": "ethereum",
+      "tags": ["wallet", "tool", "browser-extension"],
+      "relatedTerms": ["wallet", "ethereum", "dapp"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web3",
+      "term": "Web3",
+      "definition": "The vision of a [?-decentralized internet-]{Internet where users own their data and identity} built on blockchain technology.\n\n**Evolution:**\n- [?-Web1-]{1990s-2000s: Static, read-only websites}: Read-only static websites\n- [?-Web2-]{2000s-present: Interactive but centralized platforms}: Interactive, centralized platforms (current)\n- [?-Web3-]{Future: Decentralized, user-controlled internet}: Decentralized, user-owned networks\n\n**Core principles:**\n- User ownership of data\n- Decentralization\n- [?-Token-based economics-]{Digital tokens for value exchange and governance}\n- [?-Trustless interactions-]{No need to trust intermediaries, code is the law}",
+      "category": "blockchain",
+      "tags": ["fundamental", "vision", "internet"],
+      "relatedTerms": ["dapp", "blockchain", "decentralization"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "private-key",
+      "term": "Private Key",
+      "definition": "A private key is a secret code that proves you own digital currency and allows you to use it, just like your account's [?-PIN code-]{Personal Identification Number}. [?-Never tell anyone-]{If your private key is leaked, all your assets could be stolen}.\n\n**Critical security rules:**\n- Never share your private key\n- Store it securely offline\n- Losing it means losing access to your funds forever\n- No one can recover it for you\n\nPrivate keys are usually paired with an address ([?-public key-]{Can be safely shared to receive funds}) that you can share, but [?-another key-]{The public key, which can be safely shared} needs to be kept secret because it allows you to access and transfer your cryptocurrency.\n\n**Format:** Typically a [?-256-bit hexadecimal string-]{Long string of random letters and numbers} or [?-12/24-word seed phrase-]{Human-readable words that represent your private key}",
+      "category": "blockchain",
+      "tags": ["security", "cryptography", "fundamental"],
+      "relatedTerms": ["wallet", "security", "seed-phrase"],
+      "difficulty": "beginner"
+    }
+  ],
+  "zh": [
+    {
+      "id": "dapp",
+      "term": "DApp（去中心化应用）",
+      "definition": "运行在[?-去中心化网络-]{分布在许多计算机上，不受单一实体控制}上的应用程序，通常使用区块链上的智能合约。\n\n**特征：**\n- [?-开源-]{代码公开可审计}代码\n- 去中心化数据存储\n- [?-基于代币的经济模型-]{使用加密货币代币进行激励和治理}\n- 共识机制",
+      "category": "ethereum",
+      "tags": ["应用", "开发"],
+      "relatedTerms": ["smart-contract", "ethereum", "web3"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "defi",
+      "term": "DeFi（去中心化金融）",
+      "definition": "建立在区块链技术之上的金融服务，无需[?-传统中介-]{银行、经纪人或其他金融机构}等传统中介机构。\n\n**核心组件：**\n- 借贷协议\n- [?-DEX-]{去中心化交易所：点对点交易，无中间商}（去中心化交易所）\n- [?-收益耕作-]{通过向DeFi协议提供流动性来赚取奖励}和质押\n- [?-流动性池-]{锁定在智能合约中以促进交易的代币池}",
+      "category": "defi",
+      "tags": ["金融", "应用", "生态系统"],
+      "relatedTerms": ["dex", "liquidity-pool", "yield-farming"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "gas",
+      "term": "Gas（燃料费）",
+      "definition": "在以太坊网络上执行交易或智能合约所需的[?-费用-]{计算工作的报酬}。\n\nGas以 [?-gwei-]{Giga-wei: 1 gwei = 0.000000001 ETH} 为单位（1 gwei = 0.000000001 ETH），根据[?-网络拥堵情况-]{需求越高，gas价格越高}而变化。\n\n**计算公式：**\n```\n总费用 = 使用的Gas单位 × Gas价格\n```",
+      "category": "ethereum",
+      "tags": ["费用", "交易", "经济学"],
+      "relatedTerms": ["ethereum", "gwei", "transaction"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "metamask",
+      "term": "MetaMask",
+      "definition": "一款流行的[?-浏览器扩展-]{为网页浏览器添加功能的插件}和移动应用，作为以太坊钱包和区块链应用网关。\n\n**功能：**\n- 存储和管理以太币及[?-ERC-20代币-]{遵循标准在以太坊区块链上构建的代币}\n- 直接从浏览器与dApp交互\n- 安全[?-密钥管理-]{在本地安全存储您的私钥}\n- [?-多网络支持-]{连接到不同的区块链和测试网络}",
+      "category": "ethereum",
+      "tags": ["钱包", "工具", "浏览器扩展"],
+      "relatedTerms": ["wallet", "ethereum", "dapp"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "nft",
+      "term": "NFT（非同质化代币）",
+      "definition": "代表区块链上特定物品或内容所有权的独特数字资产。\n\n与加密货币（[?-同质化代币-]{每个单位都相同且可互换，就像美元}）不同，每个NFT都有独特的属性，不能一对一交换。\n\n**常见标准：**\n- [?-ERC-721-]{以太坊的独特代币标准}（以太坊）\n- [?-ERC-1155-]{可以处理同质化和非同质化代币}（多代币标准）",
+      "category": "nft",
+      "tags": ["代币", "数字资产", "所有权"],
+      "relatedTerms": ["erc721", "metadata", "minting"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "web3",
+      "term": "Web3",
+      "definition": "基于区块链技术构建的[?-去中心化互联网-]{用户拥有自己的数据和身份}愿景。\n\n**演进历程：**\n- [?-Web1-]{1990年代-2000年代：静态、只读网站}：只读静态网站\n- [?-Web2-]{2000年代-现在：交互式但中心化平台}：交互式中心化平台（当前）\n- [?-Web3-]{未来：去中心化、用户控制的互联网}：去中心化、用户拥有的网络\n\n**核心原则：**\n- 用户拥有数据\n- 去中心化\n- [?-基于代币的经济模型-]{使用数字代币进行价值交换和治理}\n- [?-无需信任的交互-]{不需要信任中介，代码即法律}",
+      "category": "blockchain",
+      "tags": ["基础概念", "愿景", "互联网"],
+      "relatedTerms": ["dapp", "blockchain", "decentralization"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "ethereum",
+      "term": "以太坊",
+      "definition": "一个去中心化的区块链平台，使开发者能够构建和部署[?-智能合约-]{满足条件时自动执行的代码}和[?-去中心化应用-]{运行在区块链上，不受任何单一实体控制的应用}（dApps）。\n\n以太坊使用其原生加密货币 [?-以太币（ETH）-]{驱动以太坊网络的燃料} 来驱动网络。",
+      "category": "ethereum",
+      "tags": ["平台", "智能合约", "基础概念"],
+      "relatedTerms": ["smart-contract", "gas", "evm", "dapp"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "consensus",
+      "term": "共识机制",
+      "definition": "区块链网络中的[?-节点-]{参与区块链网络的计算机}就[?-分布式账本-]{在多个位置维护的共享数据库}的当前状态达成一致的过程。\n\n**常见机制：**\n- [?-工作量证明（PoW）-]{矿工通过解决复杂难题来验证交易}：基于挖矿（比特币）\n- [?-权益证明（PoS）-]{验证者通过质押代币来保护网络}：基于质押（以太坊2.0）\n- **委托权益证明（DPoS）**\n- **权威证明（PoA）**",
+      "category": "blockchain",
+      "tags": ["协议", "基础概念", "技术"],
+      "relatedTerms": ["mining", "staking", "validator"],
+      "difficulty": "advanced"
+    },
+    {
+      "id": "blockchain",
+      "term": "区块链",
+      "definition": "一种[?-分布式数字账本-]{数据存储在多台计算机上，而非单一中央位置}，在多台计算机上记录交易，使其几乎无法被追溯性地修改。\n\n关键特征：\n- [?-去中心化-]{没有单一的控制点或故障点}和分布式\n- [?-不可篡改-]{一旦记录，数据无法被更改或删除}且透明\n- 通过[?-密码学-]{确保安全和隐私的数学算法}保护\n- 由节点网络维护",
+      "category": "blockchain",
+      "tags": ["基础概念", "技术", "分布式系统"],
+      "relatedTerms": ["bitcoin", "consensus", "node"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "mining",
+      "term": "挖矿",
+      "definition": "使用[?-工作量证明-]{通过计算难题解决来保护网络}共识机制验证交易并向区块链添加新区块的过程。\n\n矿工竞相解决复杂的数学难题，第一个成功者获得[?-区块奖励-]{新创建的加密货币加上交易费用}。\n\n**要求：**\n- 专用硬件（[?-ASIC-]{专用集成电路：专为挖矿设计的芯片}或[?-GPU-]{图形处理单元：强大的显卡}）\n- 大量电力消耗\n- 计算能力",
+      "category": "blockchain",
+      "tags": ["工作量证明", "验证", "经济学"],
+      "relatedTerms": ["consensus", "pow", "block-reward"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "smart-contract",
+      "term": "智能合约",
+      "definition": "将协议条款直接写入代码的自执行合约。\n\n智能合约在满足[?-预定条件-]{在代码中定义的if-then规则}时自动执行，无需[?-中介-]{如律师或公证人等第三方}。\n\n**应用场景示例：**\n- [?-DeFi-]{去中心化金融}协议\n- NFT市场\n- 自动化代币分发",
+      "category": "ethereum",
+      "tags": ["编程", "自动化", "基础概念"],
+      "relatedTerms": ["ethereum", "solidity", "dapp"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "bitcoin",
+      "term": "比特币",
+      "definition": "由[?-中本聪-]{匿名创造者，真实身份至今未知}于2009年创建的第一个也是最知名的[?-加密货币-]{由密码学保护的数字货币}。\n\n比特币引入了无需[?-中央机构-]{如银行或政府}或中介即可运作的去中心化数字货币概念。",
+      "category": "blockchain",
+      "tags": ["加密货币", "支付", "基础概念"],
+      "relatedTerms": ["blockchain", "satoshi", "mining"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "private-key",
+      "term": "私钥",
+      "definition": "私钥是一个秘密代码，可以证明您拥有数字货币并允许您使用它，就像您账户的 [?-PIN 码-]{Personal Identification Number，个人识别码}一样。[?-切勿告知他人-]{私钥一旦泄露，您的所有资产都可能被盗取}。\n\n**关键安全规则：**\n- 永远不要分享您的私钥\n- 安全地离线存储\n- 丢失私钥意味着永远失去对资金的访问权\n- 没有人能为您恢复它\n\n私钥通常与您可以共享的地址（[?-公钥-]{Public Key，可以公开分享用于接收资金}）配对使用，但[?-另一个密钥-]{即公钥，可以安全分享}需要您保密，因为它允许您访问和转移您的加密货币。\n\n**格式：** 通常是[?-256位十六进制字符串-]{由随机字母和数字组成的长字符串}或[?-12/24个单词的助记词-]{代表私钥的人类可读单词}",
+      "category": "blockchain",
+      "tags": ["安全", "密码学", "基础概念"],
+      "relatedTerms": ["wallet", "security", "seed-phrase"],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "staking",
+      "term": "质押",
+      "definition": "在[?-权益证明-]{挖矿的替代方案，更节能}系统中锁定加密货币以支持区块链网络运营的过程。\n\n质押者因[?-验证交易-]{确认交易是否合法}和维护网络安全而获得奖励。\n\n**优势：**\n- 赚取[?-被动收入-]{通过持有和质押加密货币获得定期奖励}\n- 比挖矿更节能\n- 支持网络[?-去中心化-]{权力在众多参与者之间分配}",
+      "category": "blockchain",
+      "tags": ["权益证明", "验证", "被动收入"],
+      "relatedTerms": ["consensus", "pos", "validator"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "wallet",
+      "term": "钱包",
+      "definition": "允许用户存储、发送和接收加密货币的数字工具。\n\n**类型：**\n- [?-热钱包-]{始终连接互联网，方便但安全性较低}：连接互联网（如 MetaMask、Trust Wallet）\n- [?-冷钱包-]{离线存储，更安全但不太方便}：离线存储（如 Ledger、Trezor 等硬件钱包）\n\n钱包存储的是[?-私钥-]{证明所有权的秘密代码}，而非实际的加密货币。",
+      "category": "blockchain",
+      "tags": ["存储", "安全", "工具"],
+      "relatedTerms": ["private-key", "metamask", "security"],
+      "difficulty": "beginner"
+    }
+  ]
+}

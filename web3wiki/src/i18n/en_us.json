@@ -4,6 +4,7 @@
     "nav": {
       "home": "Home",
       "explore": "Explore",
+      "glossary": "Glossary",
       "about": "About",
       "try": "Try",
       "editor": "Editor"
@@ -150,6 +151,59 @@
     "contact": {
       "title": "Get In Touch",
       "content": "Have questions or suggestions? We'd love to hear from you! Connect with us on social media or contribute to our open-source project."
+    }
+  },
+  "glossary": {
+    "title": "Web3 Glossary",
+    "subtitle": "Your comprehensive dictionary of blockchain and Web3 terminology",
+    "searchPlaceholder": "Search terms or definitions...",
+    "loading": "Loading glossary...",
+    "error": "Failed to load glossary",
+    "noResults": "No terms found matching your search",
+    "resultsCount": "term found",
+    "resultsCount_plural": "terms found",
+    "relatedTerms": "Related Terms",
+    "filter": {
+      "category": "Category",
+      "difficulty": "Difficulty",
+      "tags": "Tags",
+      "allCategories": "All Categories",
+      "allDifficulties": "All Levels",
+      "allTags": "All Tags",
+      "clear": "Clear Filters"
+    },
+    "category": {
+      "blockchain": "Blockchain",
+      "ethereum": "Ethereum",
+      "nft": "NFT",
+      "defi": "DeFi"
+    },
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "editButton": "Edit Glossary",
+    "createTerm": "Create New Term",
+    "editTerm": "Edit Term",
+    "editSuccess": "Term saved successfully!",
+    "editError": "Failed to save term. Please try again.",
+    "form": {
+      "term": "Term Name",
+      "termPlaceholder": "Enter the term name",
+      "definition": "Definition",
+      "definitionPlaceholder": "Enter the definition (supports Markdown)",
+      "category": "Category",
+      "categoryPlaceholder": "e.g., DeFi, NFT, Consensus",
+      "difficulty": "Difficulty Level",
+      "tags": "Tags",
+      "tagsPlaceholder": "Add a tag and press Enter",
+      "relatedTerms": "Related Terms",
+      "relatedTermsPlaceholder": "Enter related term ID",
+      "add": "Add",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "submitting": "Submitting..."
     }
   }
 }

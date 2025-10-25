@@ -86,6 +86,7 @@ function Layout() {
           <div>
             <Link to="/">{t("header.nav.home")}</Link>
             <Link to="/explore">{t("header.nav.explore")}</Link>
+            <Link to="/glossary">{t("header.nav.glossary")}</Link>
             <Link to="/about">{t("header.nav.about")}</Link>
             <Link to="/editor" className="nav-item">
               <span>{t("header.nav.editor")}</span>

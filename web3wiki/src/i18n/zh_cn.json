@@ -4,6 +4,7 @@
     "nav": {
       "home": "首页",
       "explore": "探索",
+      "glossary": "术语词典",
       "about": "关于",
       "try": "试用",
       "editor": "编辑器"
@@ -150,6 +151,58 @@
     "contact": {
       "title": "联系我们",
       "content": "有问题或建议？我们很乐意听取您的意见！在社交媒体上与我们联系，或为我们的开源项目做出贡献。"
+    }
+  },
+  "glossary": {
+    "title": "Web3 术语词典",
+    "subtitle": "全面的区块链和 Web3 术语字典",
+    "searchPlaceholder": "搜索术语或定义...",
+    "loading": "加载词典中...",
+    "error": "加载词典失败",
+    "noResults": "未找到匹配的术语",
+    "resultsCount": "个术语",
+    "relatedTerms": "相关术语",
+    "filter": {
+      "category": "分类",
+      "difficulty": "难度",
+      "tags": "标签",
+      "allCategories": "所有分类",
+      "allDifficulties": "所有难度",
+      "allTags": "所有标签",
+      "clear": "清除筛选"
+    },
+    "category": {
+      "blockchain": "区块链",
+      "ethereum": "以太坊",
+      "nft": "NFT",
+      "defi": "DeFi"
+    },
+    "difficulty": {
+      "beginner": "初级",
+      "intermediate": "中级",
+      "advanced": "高级"
+    },
+    "editButton": "编辑词典",
+    "createTerm": "创建新词条",
+    "editTerm": "编辑词条",
+    "editSuccess": "词条保存成功！",
+    "editError": "保存失败，请重试。",
+    "form": {
+      "term": "术语名称",
+      "termPlaceholder": "输入术语名称",
+      "definition": "定义",
+      "definitionPlaceholder": "输入定义（支持 Markdown）",
+      "category": "分类",
+      "categoryPlaceholder": "例如：DeFi、NFT、共识机制",
+      "difficulty": "难度等级",
+      "tags": "标签",
+      "tagsPlaceholder": "添加标签后按回车",
+      "relatedTerms": "相关术语",
+      "relatedTermsPlaceholder": "输入相关术语ID",
+      "add": "添加",
+      "cancel": "取消",
+      "submit": "提交",
+      "submitting": "提交中..."
     }
   }
 }
